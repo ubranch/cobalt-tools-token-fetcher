@@ -54,12 +54,12 @@ fastify.register(require('@fastify/cors'), {
 });
 
 // Health check endpoint
-fastify.get('/health', async () => {
+fastify.get('/cobalt-tools/health', async () => {
   return { status: 'ok' };
 });
 
 // Token fetching endpoint
-fastify.get('/api/v1/token', {
+fastify.get('/cobalt-tools/api/v1/token', {
   schema,
   handler: async (request, reply) => {
     request.log.info('Starting token fetch process');
